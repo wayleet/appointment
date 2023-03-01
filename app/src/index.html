@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+	<div id="root">
+	</div>
+
+	<template class="form">
+		<main>
+			<header class="header">
+				<h1 id="title">Запись к терапевту</h1>
+				<p id="description">Пысы: самая быстрая запись</p>
+			</header>
+			<form class="survey" id="survey-form">
+				<div class="survey-question">
+					<input type="text" name="name" id="name" placeholder="Введите ваше имя" required>
+					<label for="name" id="name-label">Имя*</label>
+				</div>
+
+				<div class="survey-question">
+					<input type="text" name="surname" id="surname" placeholder="Введите вашу фамилию" required>
+					<label for="surname" id="surname-label">Фамилия*</label>
+				</div>
+
+				<div class="survey-question">
+					<input type="tel" minlength="10" maxlength="12" name="phone" id="phone"
+						placeholder="Введите ваш номер телефона" required>
+					<label for="phone" id="phone-label">Телефон*</label>
+				</div>
+
+				<div class="survey-question">
+					<input type="email" name="email" id="email" placeholder="Введите вашу почту">
+					<label for="email" id="email-label">Почта:</label>
+				</div>
+
+				<div class="survey-question">
+					<input id="somedate" type="date" name="date" id="date" required>
+					<label for="date" id="date-label">Укажите желаемую дату приёма*</label>
+				</div>
+
+				<div class="survey-question">
+					<select name="status" id="dropdown" required>
+						<option value="">Не выбрано</option>
+						<option value="0">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+					</select>
+					<label for="status">Ваше состояние от 0 до 10 (где 0 — ужасно, а 10 — супер-пупер)</label>
+				</div>
+
+				<div class="survey-block">
+					<p>Что вас беспокоит?</p>
+					<label class="check">головная боль
+						<input class="input-checkbox" type="checkbox">
+						<span class="checkmark"></span>
+					</label>
+					<label class="check">температура тела выше 37,5°C
+						<input class="input-checkbox" type="checkbox">
+						<span class="checkmark"></span>
+					</label>
+					<label class="check">насморк, кашель
+						<input class="input-checkbox" type="checkbox">
+						<span class="checkmark"></span>
+					</label>
+					<label class="check">тошнота
+						<input class="input-checkbox" type="checkbox">
+						<span class="checkmark"></span>
+					</label>
+					<label class="check">боли в любой части тела
+						<input class="input-checkbox" type="checkbox">
+						<span class="checkmark"></span>
+					</label>
+					<label class="check">усталость и слабость
+						<input class="input-checkbox" type="checkbox">
+						<span class="checkmark"></span>
+					</label>
+				</div>
+				<div class="survey-question">
+					<textarea id="comments"></textarea>
+					<label for="comments">Есть ли у вас дополнительные комментарии?</label>
+				</div>
+				<div class="button-container">
+					<button type="submit" id="submit">Отправить заявку</button>
+				</div>
+			</form>
+		</main>
+	</template>
+
+	<template class="template-card">
+		<div class="card">
+			<div class="card-name"></div>
+			<div>
+				<ul class="complaints">
+				</ul>
+			</div>
+			<div class="description"></div>
+			<div class="date"></div>
+			<div class="telephone"></div>
+			<div class="status"></div>
+			<div class="email"></div>
+
+			<div>
+				<div class="confirmation"></div>
+				<button class="confirm-appointment">Подтвердить запись</button>
+				<button class="cancel-appointment">Отменить запись</button>
+			</div>
+			<div>
+				<label class="change-date" for="date">Изменить дату:
+					<input class="date-appointment" type="date" id="date"></input>
+				</label>
+			</div>
+		</div>
+		<hr class="hr1">
+	</template>
+
+	<script type="module" src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+.choose-role,
+.login-form {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.login-form {
+	margin: 0 auto;
+	width: 300px;
+}
+
+.login {
+	margin-bottom: 3px;
+	padding: 10px;
+	width: 100%;
+	border: 1px solid #ccc;
+}
+
+.button-login {
+	padding: 10px;
+}
+
+label {
+	cursor: pointer;
+}
+
+.hr1 {
+	border: 0;
+	border-top: 1px solid #ccc;
+}
+
+.login-form {
+	display: flex;
+	flex-direction: column;
+}
+
+.appointment-form {
+	display: flex;
+	flex-direction: column;
+}
+
+ul {
+	column-count: 2;
+}
+
+.card {
+	width: 500px;
+}
+
+.tabset > input[type='radio'] {
+	position: absolute;
+	left: -200vw;
+}
+
+.tabset .tab-panel {
+	display: none;
+}
+
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2) {
+	display: block;
+}
+
+body {
+	font: 16px/1.5em 'Overpass', 'Open Sans', Helvetica, sans-serif;
+	color: #333;
+	font-weight: 300;
+}
+
+.tabset > label {
+	position: relative;
+	display: inline-block;
+	padding: 15px 15px 25px;
+	border: 1px solid transparent;
+	border-bottom: 0;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.tabset > label::after {
+	content: '';
+	position: absolute;
+	left: 15px;
+	bottom: 10px;
+	width: 22px;
+	height: 4px;
+	background: #8d8d8d;
+}
+
+.tabset > label:hover,
+.tabset > input:focus + label {
+	color: #06c;
+}
+
+.tabset > label:hover::after,
+.tabset > input:focus + label::after,
+.tabset > input:checked + label::after {
+	background: #06c;
+}
+
+.tabset > input:checked + label {
+	border-color: #ccc;
+	border-bottom: 1px solid #fff;
+	margin-bottom: -1px;
+}
+
+.tab-panel {
+	/*padding: 30px 0;*/
+	border-top: 1px solid #ccc;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+.confirmation {
+	font-weight: bold;
+}
+
+.tabset {
+	max-width: 65em;
+}
+
+:root {
+	--light: #fcfcfc;
+	--dark: #111111;
+	--main: #52b788;
+	--main-hover: #40916c;
+	--light-main: #74c69d;
+	--transition: cubic-bezier(0.8, 0.01, 0.23, 1);
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	font-family: 'Ubuntu', sans-serif;
+	overflow-x: hidden;
+}
+
+main {
+	width: 100%;
+	height: 100%;
+}
+
+header {
+	color: var(--light);
+	background: var(--main);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 35px;
+}
+
+#title {
+	padding: 10px 0px 35px 0px;
+	font-size: 45px;
+	text-align: center;
+}
+
+p {
+	font-size: 18px;
+	text-align: center;
+}
+
+.survey {
+	background: var(--light);
+	padding: 40px 60px;
+}
+
+.survey-question {
+	display: flex;
+	flex-direction: column-reverse;
+	padding: 10px;
+}
+
+.survey-block {
+	padding: 10px 15px;
+}
+
+.survey-block p {
+	text-align: left;
+	padding: 10px 0px 15px 0px;
+}
+
+main label {
+	display: block;
+	padding: 5px;
+	transition: color 150ms;
+	font-size: 18px;
+}
+
+main input,
+main select,
+main textarea {
+	margin: 5px;
+	padding: 5px;
+	font-size: 18px;
+	font-family: 'Ubuntu', sans-serif;
+	border: none;
+	border-bottom: 3px solid var(--dark);
+	color: var(--dark);
+	outline: none;
+	background: inherit;
+	transition: border-bottom 150ms, color 150ms;
+}
+
+option {
+	color: var(--dark) !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+	border-bottom: 3px solid var(--main);
+}
+
+.check {
+	display: block;
+	position: relative;
+	padding-left: 30px;
+	margin-bottom: 5px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.check input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+.checkmark {
+	position: absolute;
+	top: 5px;
+	left: 0;
+	height: 20px;
+	width: 20px;
+	border-radius: 3px;
+	background-color: #ddd;
+	transition: background-color 80ms ease-in-out;
+}
+
+.check:hover input ~ .checkmark {
+	background-color: #ccc;
+}
+
+.check input:checked ~ .checkmark {
+	background-color: var(--main);
+}
+
+.check .checkmark:after {
+	content: '';
+	position: absolute;
+	opacity: 0;
+	left: 50%;
+	top: 10px;
+	width: 0px;
+	height: 0px;
+	border: solid var(--light);
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg) translateX(-60%);
+	transition: height 100ms var(--transition), width 100ms var(--transition), top 100ms var(--transition),
+		opacity 100ms var(--transition);
+}
+
+.check input:checked ~ .checkmark::after {
+	height: 10px;
+	width: 5px;
+	top: 5px;
+	opacity: 1;
+}
+
+.button-container {
+	width: 100%;
+	padding: 30px 15px 15px 15px;
+	display: grid;
+	place-items: center;
+}
+
+.button-container button {
+	border: none;
+	outline: none;
+	width: 50%;
+	min-width: 150px;
+	border-radius: 5px;
+	padding: 15px;
+	background: var(--main);
+	color: var(--light);
+	font-size: 18px;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.button-container button:hover {
+	background: var(--main-hover);
+}
+
+.button-container button:focus {
+	outline: none;
+	border: none;
+}
+
+@media screen and (max-width: 650px) {
+	header {
+		padding: 35px 20px 35px 20px;
+	}
+
+	.survey {
+		padding: 40px 15px;
+	}
+}
+
+.error-label {
+	display: block;
+	color: red;
+	margin-bottom: 10px;
+}
